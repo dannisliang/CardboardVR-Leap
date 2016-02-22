@@ -2,18 +2,11 @@
 
 public class FaceTrackMovment : MonoBehaviour {
 
-    [SerializeField]
-    UDPReceive receiver = null;
-
+    [SerializeField] UDPReceive receiver = null;
     Transform startPos = null;
 
-    [SerializeField]
-    float reductionPositionFactor = 1;
-
-    [SerializeField]
-    float reductionRotationFactor = 1;
-
-
+    [SerializeField] public float yawCompensation = 0;
+    
     void Start ()
     {
         startPos = transform;
@@ -21,7 +14,7 @@ public class FaceTrackMovment : MonoBehaviour {
 	
 	void Update ()
     {
-        transform.position = new Vector3(receiver.xPos, 0, -receiver.zPos);
-        transform.rotation = Quaternion.Euler((receiver.yPos - 25), receiver.yaw, receiver.roll);
+        startPos.position = new Vector3(receiver.xPos, 0, -receiver.zPos);
+        startPos.rotation = Quaternion.Euler((receiver.yPos + yawCompensation), receiver.yaw, receiver.roll);
     }
 }

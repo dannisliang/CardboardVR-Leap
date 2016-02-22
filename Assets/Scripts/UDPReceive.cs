@@ -16,7 +16,7 @@ public class UDPReceive: MonoBehaviour {
 	UdpClient client;
     
 	public int port;
-    
+
     // FaceAPI
     public float xPos = 0;
     public float yPos = 0;
@@ -26,8 +26,8 @@ public class UDPReceive: MonoBehaviour {
     public float roll = 0;
 	
 
-	public void Start() {				
-		receiveThread = new Thread(
+	public void Start() {
+        receiveThread = new Thread(
 			new ThreadStart(ReceiveData));
 		receiveThread.IsBackground = true;
 		receiveThread.Start();
