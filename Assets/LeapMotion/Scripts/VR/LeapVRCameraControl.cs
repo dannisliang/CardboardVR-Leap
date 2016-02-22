@@ -72,7 +72,7 @@ public class LeapVRCameraControl : MonoBehaviour {
     _camera.ResetWorldToCameraMatrix();
     _finalCenterMatrix = _camera.worldToCameraMatrix;
 
-    if (!_hasDispatchedValidCameraParams) {
+    if (_hasDispatchedValidCameraParams) {
       CameraParams cameraParams = new CameraParams(_cachedCamera);
 
       //Image retriever applies the values on it's own, but it might have applied them too early
