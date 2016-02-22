@@ -3,6 +3,9 @@ Unity project demonstrating VR using TrinusVR + OpenTrack Redirect, plus Leap Or
 
 This works great for testing VR/AR experiences without expensive hardware (looking at you Oculus).
 
+UDP receiver, Head tracking script, and example scene is forked from:
+    https://github.com/marcteys/unityFaceTracking
+
 ## Setup and Debugging
 1. Install TrinusVR on your desktop and Android device: http://trinusvr.com/
 2. Open the Unity project and import the core leap assets:
