@@ -2,7 +2,7 @@
 
 public class FaceTrackMovment : MonoBehaviour {
 
-    [SerializeField] UDPReceive receiver = null;
+    [SerializeField] Client receiver = null;
     Transform startPos = null;
 
     [SerializeField] public float startingX = 0;
@@ -21,5 +21,16 @@ public class FaceTrackMovment : MonoBehaviour {
     {
         startPos.position = new Vector3(startingX + receiver.xPos, startingY, -(receiver.zPos + startingZ));
         startPos.rotation = Quaternion.Euler(receiver.yPos + yawCompensation, receiver.yaw, receiver.roll + rollCompensation);
+
+        new ObjectTracker(startPos.position, startPos.rotation);
     }
+}
+
+class ObjectTracker {
+
+    public ObjectTracker(Transform item)
+    {
+        item.position
+    }
+
 }
