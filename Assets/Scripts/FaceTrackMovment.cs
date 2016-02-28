@@ -21,16 +21,5 @@ public class FaceTrackMovment : MonoBehaviour {
     {
         startPos.position = new Vector3(startingX + receiver.xPos, startingY, -(receiver.zPos + startingZ));
         startPos.rotation = Quaternion.Euler(receiver.yPos + yawCompensation, receiver.yaw, receiver.roll + rollCompensation);
-
-        new ObjectTracker(startPos.position, startPos.rotation);
     }
-}
-
-class ObjectTracker {
-
-    public ObjectTracker(Transform item)
-    {
-        item.position
-    }
-
 }
