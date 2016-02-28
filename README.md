@@ -17,7 +17,7 @@ https://developer.leapmotion.com/unity?id=unity5-core-assets
 6. Build & Run!
 
 ## Implementing Head Tracking
-To implement head tracking in an existing project, simply add the `UDPReceive` script to your scene, then the `FaceTrackMovement` script to your camera.
+To implement head tracking in an existing project, simply add the `Client` script to your scene, then the `FaceTrackMovement` script to your camera.
 
 ## Implementing Leap Hand Tracking
 Add the Leap VR Camera Control script to your camera, then add the `LeapSpace` prefab as a child to your camera (or simply copy it from one of the example scenes).
